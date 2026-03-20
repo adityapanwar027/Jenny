@@ -4,6 +4,7 @@ import Test0 from "/src/assets/Vector 1.svg"
 import Test1 from "/src/assets/Vector (1).svg"
 import Test2 from "/src/assets/cardimg.png"
 import Test3 from "/src/assets/Star copy.svg"
+import Profile from "/src/assets/cardimg.png"
 function Testimonial() {
   return (
     <>
@@ -54,7 +55,7 @@ function Testimonial() {
             </div>
             <div className="ts-card">
               <div className="ts-user">
-                <img src="/src/assets/cardimg.png" alt="user" />
+                <img src={Profile} alt="user" />
                 <div>
                   <h4>Fawzi Sayed</h4>
                   <span>UI UX Designer</span>
