@@ -75,7 +75,7 @@ function Testimonial() {
             </div>
             <div className="ts-card">
               <div className="ts-user">
-                <img src="/src/assets/cardimg.png" alt="user" />
+                <img src={Profile} alt="user" />
                 <div>
                   <h4>Fawzi Sayed</h4>
                   <span>UI UX Designer</span>
@@ -97,7 +97,7 @@ function Testimonial() {
             {/* Duplicate same 3 cards for infinite scroll */}
             <div className="ts-card">
               <div className="ts-user">
-                <img src="/src/assets/cardimg.png" alt="user" />
+                <img src={Profile}alt="user" />
                 <div>
                   <h4>Fawzi Sayed</h4>
                   <span>UI UX Designer</span>
@@ -117,7 +117,7 @@ function Testimonial() {
             </div>
             <div className="ts-card">
               <div className="ts-user">
-                <img src="/src/assets/cardimg.png" alt="user" />
+                <img src={Profile} alt="user" />
                 <div>
                   <h4>Fawzi Sayed</h4>
                   <span>UI UX Designer</span>
@@ -137,7 +137,7 @@ function Testimonial() {
             </div>
             <div className="ts-card">
               <div className="ts-user">
-                <img src="/src/assets/cardimg.png" alt="user" />
+                <img src={Profile} alt="user" />
                 <div>
                   <h4>Fawzi Sayed</h4>
                   <span>UI UX Designer</span>
