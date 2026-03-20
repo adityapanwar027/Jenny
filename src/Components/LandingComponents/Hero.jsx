@@ -27,21 +27,20 @@ const Hero = () => {
 
       <div className="hero-section">
         <img src={Eclipse2} alt="Eclipse background" className="eclipse" />
-
         {/* left side text - testimonial */}
         <img
-          src={Frame4Left}
+           src={Frame4Left}
+          
           alt="Left side text"
           className={`frame4-left ${isHovered ? "hovered" : ""}`}
         />
-
         {/* right side text - 10 years experience */}
         <img
           src={Frame3}
           alt="Right side text"
           className={`frame3 ${isHovered ? "hovered" : ""}`}
         />
-
+        
         {/* girl image */}
         <img
           src={girlImage}

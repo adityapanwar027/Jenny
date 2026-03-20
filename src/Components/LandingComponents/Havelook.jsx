@@ -1,6 +1,8 @@
 import React from "react";
 import "./Havelook.css";
-
+import Project1 from "/src/assets/arrow.svg"
+import Project0 from "/src/assets/look.png"
+import Project3 from "/src/assets/up right.svg"
 function Havelook() {
   return (
     <>
@@ -20,9 +22,9 @@ function Havelook() {
           <div className="portfolio-slider">
             {/* CARD 1 */}
             <div className="portfolio-card">
-              <img src="/src/assets/look.png" alt="project" />
+              <img src={Project0} alt="project" />
 
-              <button className="portfolio-card-arrow"><img src="src/assets/arrow.svg" alt="" /></button>
+              <button className="portfolio-card-arrow"><img src={Project1} alt="" /></button>
               <h2
                 style={{
                   position: "absolute",
@@ -52,9 +54,9 @@ function Havelook() {
 
             {/* CARD 2 */}
             <div className="portfolio-card">
-              <img src="/src/assets/look.png" alt="project" />
+              <img src={Project0} alt="project" />
 
-              <button className="portfolio-card-arrow"><img src="src/assets/arrow.svg" alt="" /></button>
+              <button className="portfolio-card-arrow"><img src={Project1} alt="" /></button>
               <h2
                 style={{
                   position: "absolute",
@@ -103,7 +105,7 @@ function Havelook() {
           <div className="portfolio-bottom">
             <h2>
               Lirante - Food Dilvery Solution
-              <span className="portfolio-bottom-arrow"><img src="src/assets/up right.svg" alt="" /></span>
+              <span className="portfolio-bottom-arrow"><img src={Project3}alt="" /></span>
             </h2>
 
             <p>

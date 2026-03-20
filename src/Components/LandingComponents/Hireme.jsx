@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hireme.css'
+import WomenPointing from "/src/assets/hme.png"
 export default function Hireme() {
   return (
    <>
@@ -7,7 +8,7 @@ export default function Hireme() {
    <section className="section-gap hire-section" id="about">
         <div className="container hire-layout">
           <div className="hire-image-block">
-            <img src="/src/assets/hme.png"alt="Woman pointing"className="hire-image"/>
+            <img src={WomenPointing}alt="Woman pointing"className="hire-image"/>
           </div>
 
           <div className="hire-content">
