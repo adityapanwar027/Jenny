@@ -1,0 +1,133 @@
+.mywork-root {
+  font-family: 'Poppins', sans-serif;
+  /* background: #efefef; */
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+.mywork-section {
+  width: min(1300px, 100%);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.mywork-title {
+  text-align: center;
+  font-size: clamp(42px, 4vw, 64px);
+  font-weight: 600;
+  margin-bottom: 60px;
+  color: #2f3b4c;
+}
+
+.mywork-title span {
+  color: #f47c2f;
+}
+
+.mywork-timeline {
+  position: relative;
+}
+
+.mywork-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 70%;
+  margin-top:63px;
+  border-left: 3px dotted #2f3b4c;
+}
+
+.mywork-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: clamp(24px, 3vw, 60px);
+  margin-bottom: clamp(30px, 3vw, 60px);
+  position: relative;
+}
+
+.mywork-row:last-child {
+  margin-bottom: 0;
+}
+
+.mywork-left,
+.mywork-right {
+  width: 40%;
+}
+
+.mywork-left h2,
+.mywork-right h2 {
+  font-size: clamp(32px, 3vw, 40px);
+  font-weight: 600;
+  color: #2f3b4c;
+  margin-bottom: 15px;
+}
+
+.mywork-left p,
+.mywork-right p {
+  font-size: clamp(18px, 1.5vw, 22px);
+  color: #8c96a3;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mywork-circle-wrapper {
+  position: absolute;
+  left: 50%;
+  margin-top: 15px;
+  transform: translateX(-50%);
+}
+
+
+.mywork-circle-outer.dark {
+  border-color: #2f3b4c;
+}
+
+.mywork-circle-outer {
+  width: 50px;   /* increased */
+  height: 50px;  /* increased */
+  border-radius: 50%;
+  border: 2px dotted #2f3b4c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #efefef; */
+}
+
+.mywork-circle-inner {
+  width: 36px;   /* increased */
+  height: 36px;  /* increased */
+  border-radius: 50%;
+  background: #f47c2f;
+}
+
+.mywork-circle-outer.dark .mywork-circle-inner {
+  background: #2f3b4c;
+}
+
+
+/* responcive css */
+@media (max-width: 960px) {
+  .mywork-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mywork-left,
+  .mywork-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mywork-circle-wrapper {
+    position: static;
+    margin: 24px 0;
+  }
+
+  .mywork-timeline::before {
+    display: none;
+  }
+}

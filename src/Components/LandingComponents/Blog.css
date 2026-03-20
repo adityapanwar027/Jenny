@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+body{
+  font-family: Lufga;
+}
+
+.blogHeaderSection{
+  width:100%;
+  padding:120px 6% 20px 6%;
+  margin-bottom: 20px;
+}
+.blogHeaderContainer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.blogHeaderLeft h1{
+  font-size:50px;
+  line-height:1.1;
+  font-weight:600;
+  color:#3d4757;
+}
+.blogSeeBtn{
+  padding:15px 30px;
+  border:none;
+  border-radius:50px;
+  background:#f58233;
+  color:white;
+  font-size:20px;
+  font-weight:500;
+  cursor:pointer;
+}
+
+/* +++++++++++ card section css ++++++++++ */
+/* Portfolio Card Container */
+.portfolioCardContainer {
+  width: 416px;
+  height: 432px;
+  position: relative;
+}
+/* Shape wrapper with clip-path */
+.portfolioCardShape {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: path('M0 37C0 16.5655 16.5655 0 37 0H379C399.435 0 416 16.5655 416 37V282.323C416 302.757 399.435 319.323 379 319.323H356.236C317.649 319.323 286.562 350.967 287.246 389.547L287.332 394.343C287.699 415.032 271.029 432 250.337 432H37C16.5655 432 0 415.435 0 395V37Z');
+}
+/* Image inside card */
+.portfolioCardsWrapper {
+  display: flex;
+  gap: 20px;
+  margin-left: 75px;
+}
+.portfolioCardImage {
+  width: 100%;
+  height: 107%;
+  object-fit: cover;
+  display: block;
+}
+/* Arrow circle */
+.portfolioCardArrow {
+  position: absolute;
+      bottom: -3px;
+    right: 10px;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Arrow icon */
+.portfolioCardArrow svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+/* Hover effect on card */
+.portfolioCardContainer:hover .portfolioCardArrow{
+  background: #ff6b00;  
+  transition: 0.3s ease;
+}
+.portfolioCardArrow{
+  transition: 0.3s ease;
+}
+
+
+/*+++++++++++ css for bottom section of blog post +++++++++++++++++*/
+.blogSec{
+  width:calc(100% - 35px);
+  padding:50px 6%;
+  position: relative;
+  margin-right: 20px;
+}
+.blogWrapper{
+  display:flex;
+  justify-content:space-between;
+}
+.blogItem{
+  width:30%;
+}
+.blogTag{
+  display:inline-block;
+  background:#e9eaec;
+  color:#404040;
+  padding:10px 22px;
+  border-radius:30px;
+  font-size:15px;
+  margin-bottom:28px;
+  /* margin-left: 8px; */
+}
+.blogInfo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:22px;
+  color:#5c6675;
+  font-size:17px;
+}
+.blogDot{
+  width:7px;
+  height:7px;
+  background:#ff7a2f;
+  /* margin-left: 10px; */
+  border-radius:50%;
+}
+.blogHeading{
+
+  font-size:28px;
+  line-height:1.3;
+  font-weight:400;
+  height:5.2em;
+  overflow:hidden;}
+
+/* Tablet Responsive */
+@media (max-width: 1024px){
+
+  .blogHeaderLeft h1{
+    font-size:40px;
+  }
+
+  .portfolioCardsWrapper{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-left:0;
+  }
+
+  .portfolioCardContainer{
+    width:320px;
+    height:340px;
+  }
+
+  .blogWrapper{
+    flex-wrap:wrap;
+    gap:40px;
+  }
+
+  .blogItem{
+    width:45%;
+  }
+
+}
+/* Mobile Responsive */
+@media (max-width: 768px){
+
+  .blogHeaderContainer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .blogHeaderLeft h1{
+    font-size:34px;
+  }
+
+  .blogSeeBtn{
+    margin-right:0;
+  }
+
+  .portfolioCardsWrapper{
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    margin-left:0;
+  }
+
+  .portfolioCardContainer{
+    width:100%;
+    max-width:380px;
+    height:380px;
+  }
+
+  .blogWrapper{
+    flex-direction:column;
+    gap:50px;
+  }
+
+  .blogItem{
+    width:100%;
+  }
+
+  .blogHeading{
+    font-size:28px;
+  }
+
+}
+/* Small Mobile */
+
+@media (max-width: 480px){
+
+  .blogHeaderSection{
+    padding:80px 5%;
+    margin-left:0;
+  }
+
+  .blogHeaderLeft h1{
+    font-size:28px;
+  }
+
+  .blogSeeBtn{
+    padding:12px 24px;
+    font-size:16px;
+  }
+
+  .portfolioCardArrow{
+    width:70px;
+    height:70px;
+  }
+
+  .blogHeading{
+    font-size:24px;
+  }
+
+}
+

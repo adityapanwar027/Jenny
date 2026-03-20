@@ -1,0 +1,93 @@
+.banner{
+  width:100%;
+  background:#ff6a00;
+  padding:60px 0;
+  border-radius:25px;
+  position:relative;
+  overflow:hidden;
+  margin-top:30px;
+}
+
+/* White Slanted Strip */
+.white-strip{
+  position:absolute;
+  top:50%;
+  left:-5%;
+  width:110%;
+  height:60px;
+  background:#fff;
+  transform:rotate(-2.5deg) translateY(-50%);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* Sliding container */
+.slide-track{
+  display:flex;
+  width:max-content;
+  animation:scroll 7s linear infinite;
+}
+
+/* Text style */
+.slide-text{
+  font-size:48px;
+  font-weight:500;
+  white-space:nowrap;
+  padding-right:80px;
+}
+
+.slide-text span{
+  color:#ff6a00;
+  margin:0 20px;
+}
+
+/* Animation */
+@keyframes scroll{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
+ 
+/* RESPONSIVE */ 
+/* Tablet */
+@media (max-width: 992px){
+  .banner{
+    padding:45px 0;
+    border-radius:20px;
+  }
+
+  .white-strip{
+    height:50px;
+  }
+
+  .slide-text{
+    font-size:32px;
+    padding-right:60px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+  .banner{
+    padding:35px 0;
+    border-radius:15px;
+  }
+
+  .white-strip{
+    height:45px;
+    transform:rotate(-2deg) translateY(-50%);
+  }
+
+  .slide-text{
+    font-size:22px;
+    padding-right:40px;
+  }
+
+  .slide-text span{
+    margin:0 12px;
+  }
+}

@@ -1,0 +1,127 @@
+
+.discuss-root {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.discuss-card {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.discuss-heading {
+  font-size: clamp(2.75rem, 3vw, 3.25rem);
+  font-weight: 600;
+  color: #2d3748;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.discuss-heading span {
+  color: #ff7a2f;
+  font-weight: 700;
+}
+
+.input-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 8px 8px 8px 20px;
+  width: 100%;
+  max-width: 700px;
+  height: 80px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #E4E7EC;
+}
+
+.mail {
+  height: 60px;
+  width: 60px;
+  background-color: #ffe9d5;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.input-box img {
+  width: 30px;
+}
+
+.input-box input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+.input-box input::placeholder {
+  color: black;
+}
+
+.input-box button {
+  background: #ff7a2f;
+  border: none;
+  color: #fff;
+  padding: 25px 45px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.stats {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 20px;
+  color: #4a5568;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats img {
+  width: 24px;
+}
+
+.stats span {
+  font-weight: 500;
+}
+
+
+/* responcive css */
+@media (max-width: 600px) {
+  .input-box {
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .mail {
+    margin-right: 0;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+}

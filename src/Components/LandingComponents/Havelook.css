@@ -1,0 +1,326 @@
+.portfolio-sec {
+  width: 100%;
+  padding: 40px 6% 100px 6%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.portfolio-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* TOP */
+
+.portfolio-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.portfolio-title {
+  font-size: 64px;
+  font-weight: 600;
+  color: #2f3a4a;
+  line-height: 1.2;
+  font-family: 'Lufga', sans-serif;
+}
+
+.portfolio-title span {
+  color: #f47c33;
+  font-family: 'Lufga', sans-serif;
+}
+
+.portfolio-seeall {
+  background: #f47c33;
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Lufga', sans-serif;
+}
+
+.portfolio-seeall:hover {
+  opacity: 0.9;
+}
+
+/* CARD */
+
+.portfolio-slider {
+  display: flex;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.portfolio-card {
+  position: relative;
+  flex: 1;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Base Gradient Layer */
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(
+    to top right,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.25) 30%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  z-index: 1;
+}
+
+/* Card Image */
+.portfolio-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 30px;
+  transition: transform 0.6s ease;
+}
+
+/* ARROW */
+.portfolio-card {
+  position: relative;
+}
+
+/* .portfolio-card-arrow {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #f47c33;
+  background: transparent;
+  color: #f47c33;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;  
+} */
+
+.portfolio-card:hover .portfolio-card-arrow {
+  transform: scale(1.1);
+}
+
+/* PREMIUM FULL GLASS */
+
+.portfolio-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px; /* control the height here */
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+  z-index: 3;
+  opacity: 0;
+  
+ background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.1),
+    rgba(0,0,0,0)
+  );
+}
+.portfolio-card:hover .portfolio-card-overlay {
+  opacity: 1;
+}
+
+/* Glass Panel */
+.portfolio-glass-full {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(#979797) 0%,
+    rgba(#979797) 30%,
+    rgba(#979797) 60%,
+    rgba(#979797) 100%
+  );
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+
+  box-shadow:
+  0 -35px 90px rgba(0,0,0,0.5),
+  inset 0 1px 0 rgba(255,255,255,0.15);
+  transform: translateY(40px);
+  transition: transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+
+.portfolio-card:hover .portfolio-glass-full {
+  transform: translateY(0);
+}
+
+/* Glass Text */
+.portfolio-glass-full h2 {
+  font-size: 64px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 20px;
+  font-family: 'Lufga', sans-serif;
+}
+
+.portfolio-glass-full p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  max-width: 90%;
+  font-family: 'Lufga', sans-serif;
+}
+
+/* Dots */
+
+.portfolio-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 40px 0;
+}
+
+.portfolio-dots span {
+  width: 10px;
+  height: 10px;
+  background: #d3d3d3;
+  border-radius: 50%;
+}
+
+.portfolio-dots .active {
+  width: 40px;
+  height: 10px;
+  border-radius: 20px;
+  background: #f47c33;
+}
+
+/* TAGS */
+
+.portfolio-tags {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.portfolio-tags span {
+  padding: 14px 28px;
+  background: #e9e9e9;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #333;
+}
+
+/*  Bottom  */
+
+.portfolio-bottom {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.portfolio-bottom h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #2f3a4a;
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.portfolio-card {
+  position: relative;
+}
+
+.portfolio-card-arrow {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 50px;              /* reduced size */
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #f47c33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+/*  IMPORTANT FIX */
+.portfolio-card-arrow img {
+  width: 20px;              /* control arrow size */
+  height: 20px;
+  object-fit: contain;
+}
+
+/* hover effect */
+.portfolio-card:hover .portfolio-card-arrow {
+  background: #f47c33;
+}
+
+.portfolio-card:hover .portfolio-card-arrow img {
+  filter: brightness(0) invert(1); /* makes arrow white */
+}
+
+.portfolio-bottom-arrow {
+  background-color: #f47c33;
+  height: 50px;
+  width: 50px;
+  border-radius:50px;
+}
+.portfolio-bottom-arrow img {
+ margin-top: 5px;
+}
+.portfolio-bottom p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Lufga', sans-serif;
+}
+
+/* responcive  */
+@media (max-width: 992px) {
+  .portfolio-top {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .portfolio-title { font-size: 42px; }
+  .portfolio-slider { gap: 25px; }
+  .portfolio-card img { height: 280px; }
+  .portfolio-glass-full h2 { font-size: 40px; }
+}
+
+@media (max-width: 768px) {
+  .portfolio-title { font-size: 32px; }
+  .portfolio-slider { flex-direction: column; }
+  .portfolio-card img { height: 250px; }
+  .portfolio-glass-full { padding: 40px; }
+  .portfolio-glass-full h2 { font-size: 28px; }
+  .portfolio-bottom h2 { font-size: 26px; }
+  .portfolio-bottom p { font-size: 15px; }
+}
+
+@media (max-width: 576px) {
+  .portfolio-sec { padding: 30px 5% 70px; }
+  .portfolio-title { font-size: 26px; }
+  .portfolio-seeall { width: 100%; }
+  .portfolio-card img { height: 220px; }
+  .portfolio-glass-full h2 { font-size: 22px; }
+  .portfolio-bottom h2 { font-size: 22px; }
+}
