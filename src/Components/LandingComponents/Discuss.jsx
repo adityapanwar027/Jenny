@@ -1,6 +1,9 @@
 import React from 'react'
 import './Discuss.css'
-
+import Mail from "/src/assets/sms.svg"
+import Star from "/src/assets/star.svg"
+import Awards from "/src/assets/star.svg"
+import Product from "/src/assets/shield-tick.svg" 
 function Discuss() {
   return (
     <div className="discuss-root">
@@ -13,7 +16,7 @@ function Discuss() {
         <div className="input-wrapper">
           <div className="input-box">
             <div className="mail">
-              <img src="/src/assets/sms.svg" alt="" />
+              <img src={Mail} alt="" />
             </div>
             <input type="email" placeholder="Enter Email Address" />
             <button>Send</button>
@@ -22,15 +25,15 @@ function Discuss() {
 
         <div className="stats">
           <div>
-            <img src="/src/assets/star.svg" alt="" />
+            <img src={Star} alt="" />
             <span>4.9/5 Average Ratings</span>
           </div>
           <div>
-            <img src="/src/assets/award.svg" alt="" />
+            <img src={Awards} alt="" />
             <span>25+ Winning Awards</span>
           </div>
           <div>
-            <img src="/src/assets/shield-tick.svg" alt="" />
+            <img src={Product}alt="" />
             <span>Certified Product Designer</span>
           </div>
         </div>

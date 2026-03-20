@@ -1,6 +1,13 @@
 import React from 'react'
 import './Footer.css'
 import Logo from "../GlobalComponents/Logo"
+import Hire from "/src/assets/up right.svg"
+import Mail0 from "/src/assets/send.svg"
+import Facebook from "/src/assets/facebook.svg" 
+import Youtube from "/src/assets/youtube.svg"
+import Whatsapp from "/src/assets/whatsapp.svg" 
+import Instagram from "/src/assets/instagram.svg" 
+import Twitter from "/src/assets/Union.svg"
 function Footer() {
   return (
     <footer className="footer">
@@ -10,7 +17,7 @@ function Footer() {
         <div className="footer-top">
           <h1>Lets Connect there</h1>
           <button className="hire-btn">
-            Hire me <span><img src="/src/assets/up right.svg" alt="" /></span>
+            Hire me <span><img src={Hire} alt="" /></span>
           </button>
         </div>
 
@@ -35,11 +42,11 @@ function Footer() {
             </p>
 
             <div className="social-icons">
-              <img src="/src/assets/facebook.svg" alt="" />
-              <img src="/src/assets/youtube.svg" alt="" />
-              <img src="/src/assets/whatsapp.svg" alt="" />
-              <img src="/src/assets/instagram.svg" alt="" />
-              <img src="/src/assets/Union.svg" alt="" />
+              <img src={Facebook} alt="" />
+              <img src={Youtube} alt="" />
+              <img src={Whatsapp} alt="" />
+              <img src={Instagram} alt="" />
+              <img src={Twitter} alt="" />
             </div>
           </div>
 
@@ -70,7 +77,7 @@ function Footer() {
             <h3>Get the latest information</h3>
             <div className="email-box">
               <input type="email" placeholder="Email Address" />
-              <button><img src="/src/assets/send.svg" alt="" /></button>
+              <button><img src={Mail0} alt="" /></button>
             </div>
           </div>
 

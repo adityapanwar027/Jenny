@@ -1,5 +1,9 @@
 import React from 'react'
 import './Blog.css'
+import Blog1 from "/src/assets/blog.jpg"
+import Blog2 from "/src/assets/up right copy.svg"
+import Blog3 from "/src/assets/blog2.png"
+import Blog4 from "/src/assets/blog.png"
 function Blog() {
   return (
 <>
@@ -20,27 +24,34 @@ function Blog() {
  </section>
 
   {/* Card Section */}
+
+
+
 {/* Card1 */}
    <div className="portfolioCardsWrapper">
  {/* Card 1 */}
   <div className="portfolioCardContainer">
     <div className="portfolioCardShape">
-      <img src="/src/assets/blog.jpg" alt="" className="portfolioCardImage" />
+      <img src={Blog1} alt="" className="portfolioCardImage" />
     </div>
 <div className="portfolioCardArrow">
-  <img src="/src/assets/up right copy.svg" alt="" /> 
+  <img src={Blog2} alt="" /> 
         <path d="M21 51L51 21" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M21 21H51V51" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
       {/* </svg> */}
     </div>
   </div>
+
+
+
+
 {/* Card 2 */}
   <div className="portfolioCardContainer">
     <div className="portfolioCardShape">
-      <img src="/src/assets/blog2.png" alt="" className="portfolioCardImage" />
+      <img src={Blog3}alt="" className="portfolioCardImage" />
     </div>
 <div className="portfolioCardArrow">
-  <img src="/src/assets/up right copy.svg" alt="" /> 
+  <img src={Blog2} alt="" /> 
         <path d="M21 51L51 21" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M21 21H51V51" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
       {/* </svg> */}
@@ -49,7 +60,7 @@ function Blog() {
 {/* Card 3 */}
   <div className="portfolioCardContainer">
     <div className="portfolioCardShape">
-      <img src="/src/assets/blog.png" alt="" className="portfolioCardImage" />
+      <img src={Blog4} alt="" className="portfolioCardImage" />
     </div>
 <div className="portfolioCardArrow">
  <img src="/src/assets/up right copy.svg" alt="" /> 
