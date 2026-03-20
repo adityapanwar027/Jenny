@@ -34,9 +34,7 @@ function Testimonial() {
             {/* Original 3 cards */}
             <div className="ts-card">
               <div className="ts-user">
-                <img src={
-                  Test2
-                } alt="user" />
+                <img src={Test2} alt="user" />
                 <div>
                   <h4>Fawzi Sayed</h4>
                   <span>UI UX Designer</span>

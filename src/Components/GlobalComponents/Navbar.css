@@ -154,6 +154,36 @@
   }
 }
 
+@media (max-width: 768px) {
+
+  .navbar {
+    height: auto;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .nav-left,
+  .nav-right {
+    flex: none;
+    justify-content: center;
+    flex-wrap: wrap;   /* IMPORTANT */
+    gap: 8px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .navbar-logo-wrapper {
+    width: 130px;
+    height: 40px;
+  }
+}
 /* cleanup */
 .nav-link:active {
   transform: none;

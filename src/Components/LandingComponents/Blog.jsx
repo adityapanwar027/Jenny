@@ -63,7 +63,7 @@ function Blog() {
       <img src={Blog4} alt="" className="portfolioCardImage" />
     </div>
 <div className="portfolioCardArrow">
- <img src="/src/assets/up right copy.svg" alt="" /> 
+ <img src={Blog2} alt="" /> 
         <path d="M21 51L51 21" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M21 21H51V51" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
       {/* </svg> */}
