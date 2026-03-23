@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-
 * {
   margin: 0;
   padding: 0;
@@ -170,17 +169,36 @@
   font-family: Lufga;
 }
 
-/* responcive css of my footer */
-/* Large Tablets (1200px) */
+/* ================= RESPONSIVE FOOTER ================= */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1200px) {
+  .footer-middle {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-top h1 {
+    font-size: 56px;
+  }
+}
+
 /* Tablets */
 @media (max-width: 992px) {
   .footer-top {
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-middle {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
   }
 
   .footer-bottom {
     flex-direction: column;
+    gap: 10px;
     text-align: center;
   }
 }
@@ -193,26 +211,63 @@
 
   .footer-top h1 {
     font-size: 36px;
+    line-height: 1.3;
   }
 
   .hire-btn {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
     font-size: 14px;
-    padding: 8px 18px;
+  }
+
+  .footer-middle {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .newsletter .email-box {
+    flex-direction: column;
+    border-radius: 12px;
+  }
+
+  .email-box input {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .email-box button {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
   }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 6%;
+    padding: 40px 5%;
+    border-radius: 16px 16px 0 0;
   }
 
   .footer-top h1 {
     font-size: 28px;
-    line-height: 1.3;
   }
 
-  .footer-bottom {
-    justify-content: center;
+  .footer-col h3 {
+    font-size: 18px;
+  }
+
+  .footer-col ul li {
+    font-size: 14px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+
+  .social-icons {
+    font-size: 16px;
+    gap: 10px;
   }
 }

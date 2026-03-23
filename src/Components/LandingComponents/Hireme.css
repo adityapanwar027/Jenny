@@ -101,45 +101,71 @@
 }
 
 
-/* responsive css */
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   .hire-layout {
-    padding: 70px 32px;
+    padding: 60px 40px;
+    gap: 36px;
   }
 
-  .hire-content > p {
+  .hire-content p {
     font-size: 18px;
   }
-
-  .outline-btn {
-    min-height: 72px;
-    font-size: 34px;
-    padding: 14px 34px;
-  }
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 992px) {
   .hire-layout {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hire-image-block {
+    margin-bottom: 20px;
+  }
+
+  .hire-content p {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .hire-layout {
+    padding: 40px 20px;
     border-radius: 24px;
-    padding: 42px 14px;
   }
 
-  .hire-content > p {
-    font-size: 15px;
+  .hire-content h2 {
+    font-size: 36px;
+  }
+
+  .hire-content p {
+    font-size: 16px;
   }
 
   .stat-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .outline-btn {
     width: 100%;
-    font-size: 28px;
+    font-size: 22px;
+    min-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hire-content h2 {
+    font-size: 30px;
+  }
+
+  .hire-content p {
+    font-size: 14px;
+  }
+
+  .outline-btn {
+    font-size: 18px;
+    min-height: 52px;
+    padding: 12px 20px;
   }
 }

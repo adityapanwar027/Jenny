@@ -132,7 +132,7 @@ body{
   height:5.2em;
   overflow:hidden;}
 
-/* Tablet Responsive */
+/* ================= TABLET ================= */
 @media (max-width: 1024px){
 
   .blogHeaderLeft h1{
@@ -146,8 +146,9 @@ body{
   }
 
   .portfolioCardContainer{
-    width:320px;
-    height:340px;
+    width:90%;
+    max-width:340px;
+    height:auto;
   }
 
   .blogWrapper{
@@ -156,11 +157,12 @@ body{
   }
 
   .blogItem{
-    width:45%;
+    width:48%;
   }
 
 }
-/* Mobile Responsive */
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px){
 
   .blogHeaderContainer{
@@ -170,11 +172,12 @@ body{
   }
 
   .blogHeaderLeft h1{
-    font-size:34px;
+    font-size:32px;
   }
 
   .blogSeeBtn{
-    margin-right:0;
+    font-size:16px;
+    padding:12px 24px;
   }
 
   .portfolioCardsWrapper{
@@ -187,44 +190,20 @@ body{
   .portfolioCardContainer{
     width:100%;
     max-width:380px;
-    height:380px;
+  }
+
+  .portfolioCardArrow{
+    width:80px;
+    height:80px;
   }
 
   .blogWrapper{
     flex-direction:column;
-    gap:50px;
+    gap:40px;
   }
 
   .blogItem{
     width:100%;
-  }
-
-  .blogHeading{
-    font-size:28px;
-  }
-
-}
-/* Small Mobile */
-
-@media (max-width: 480px){
-
-  .blogHeaderSection{
-    padding:80px 5%;
-    margin-left:0;
-  }
-
-  .blogHeaderLeft h1{
-    font-size:28px;
-  }
-
-  .blogSeeBtn{
-    padding:12px 24px;
-    font-size:16px;
-  }
-
-  .portfolioCardArrow{
-    width:70px;
-    height:70px;
   }
 
   .blogHeading{
@@ -233,3 +212,50 @@ body{
 
 }
 
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px){
+
+  .blogHeaderSection{
+    padding:70px 5% 20px;
+  }
+
+  .blogHeaderLeft h1{
+    font-size:26px;
+  }
+
+  .blogSeeBtn{
+    padding:10px 20px;
+    font-size:14px;
+  }
+
+  .portfolioCardArrow{
+    width:65px;
+    height:65px;
+  }
+
+  .blogHeading{
+    font-size:22px;
+  }
+
+}
+
+/* ================= LARGE SCREENS ================= */
+@media (min-width: 1440px){
+
+  .blogHeaderSection{
+    padding:140px 8% 30px;
+  }
+
+  .blogHeaderLeft h1{
+    font-size:56px;
+  }
+
+  .portfolioCardsWrapper{
+    gap:40px;
+  }
+
+  .blogWrapper{
+    gap:60px;
+  }
+
+}

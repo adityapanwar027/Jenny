@@ -29,8 +29,7 @@ const Hero = () => {
         <img src={Eclipse2} alt="Eclipse background" className="eclipse" />
         {/* left side text - testimonial */}
         <img
-           src={Frame4Left}
-          
+          src={Frame4Left}
           alt="Left side text"
           className={`frame4-left ${isHovered ? "hovered" : ""}`}
         />
@@ -124,3 +123,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
