@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Hero.css'
+import "./Hero.css";
 import Eclipse2 from "/Frames/Ellipse 2.svg";
 import Frame4 from "/Frames/Frame 4.svg";
 import Frame3 from "/Frames/Frame 3.svg";
@@ -24,7 +24,6 @@ const Hero = () => {
 
   return (
     <>
-
       <div className="hero-section">
         <img src={Eclipse2} alt="Eclipse background" className="eclipse" />
         {/* left side text - testimonial */}
@@ -39,7 +38,7 @@ const Hero = () => {
           alt="Right side text"
           className={`frame3 ${isHovered ? "hovered" : ""}`}
         />
-        
+
         {/* girl image */}
         <img
           src={girlImage}
@@ -89,14 +88,20 @@ const Hero = () => {
             <span className="hero-cta-button__label">Portfolio</span>
             <span
               className={`hero-cta-button__arrow ${
-                activeCta === "portfolio" ? "hero-cta-button__arrow--visible" : ""
+                activeCta === "portfolio"
+                  ? "hero-cta-button__arrow--visible"
+                  : ""
               }`}
               aria-hidden="true"
             >
-              <img src={arrowIcon} alt="" className="hero-cta-button__arrow-icon" />
+              <img
+                src={arrowIcon}
+                alt=""
+                className="hero-cta-button__arrow-icon"
+              />
             </span>
           </button>
-        {/* Hire me button */}
+          {/* Hire me button */}
           <button
             type="button"
             className={`hero-cta-button ${
@@ -113,7 +118,11 @@ const Hero = () => {
               }`}
               aria-hidden="true"
             >
-              <img src={arrowIcon} alt="" className="hero-cta-button__arrow-icon" />
+              <img
+                src={arrowIcon}
+                alt=""
+                className="hero-cta-button__arrow-icon"
+              />
             </span>
           </button>
         </div>
@@ -123,4 +132,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
