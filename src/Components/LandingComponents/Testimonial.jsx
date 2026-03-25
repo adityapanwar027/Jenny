@@ -1,10 +1,10 @@
 import React from 'react'
 import './Testimonial.css'
-import Test0 from "/src/assets/Vector 1.svg"
-import Test1 from "/src/assets/Vector (1).svg"
-import Test2 from "/src/assets/cardimg.png"
-import Test3 from "/src/assets/Star copy.svg"
-import Profile from "/src/assets/cardimg.png"
+import Test0 from "../../assets/Vector 1.svg"
+import Test1 from "../../assets/Vector (1).svg"
+import Test2 from "../../assets/cardimg.png"
+import Test3 from "../../assets/Star copy.svg"
+import Profile from "../../assets/cardimg.png"
 function Testimonial() {
   return (
     <>

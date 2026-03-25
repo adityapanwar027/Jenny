@@ -1,124 +1,49 @@
-import './Navbar.css'
-import { useState } from 'react';
-import Logo from "../GlobalComponents/Logo"
+import "./Navbar.css";
+import { useState } from "react";
+import Logo from "../GlobalComponents/Logo";
+
 const Navbar = () => {
-   const [activeLink, setActiveLink] = useState("Home");
+  const [activeLink, setActiveLink] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleClick = (section, id) => {
+    setActiveLink(section);
+    setMenuOpen(false);
+    document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <>
+    <nav className="navbar">
+      <div className="navbar-container">
 
+        {/* LEFT */}
+        <ul className={`nav-left ${menuOpen ? "open" : ""}`}>
+          <li><a onClick={() => handleClick("Home", "#home")} className={`nav-link ${activeLink==="Home"?"active":""}`}>Home</a></li>
+          <li><a onClick={() => handleClick("About", "#about")} className={`nav-link ${activeLink==="About"?"active":""}`}>About</a></li>
+          <li><a onClick={() => handleClick("Service", "#service")} className={`nav-link ${activeLink==="Service"?"active":""}`}>Service</a></li>
+        </ul>
 
-      <nav className="navbar">
-        <div className="navbar-container">
-          
-
-
-          <ul className="nav-left">
-            <li className="nav-item">
-              <a
-                href="#home"
-                className={`nav-link ${activeLink === "Home" ? "active" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveLink("Home");
-                  document
-                    .querySelector("#home")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#about"
-                className={`nav-link ${activeLink === "About" ? "active" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveLink("About");
-                  document
-                    .querySelector("")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#service"
-                className={`nav-link ${activeLink === "Service" ? "active" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveLink("Service");
-                  document
-                    .querySelector("#service")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Service
-              </a>
-            </li>
-          </ul>
-
-          
-          <div className="navbar-logo-wrapper">
-            <Logo />
-          </div>
-
-
-          
-          <ul className="nav-right">
-            <li className="nav-item">
-              <a
-                href="#resume"
-                className={`nav-link ${activeLink === "Resume" ? "active" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveLink("Resume");
-                  document
-                    .querySelector("#resume")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Resume
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#project"
-                className={`nav-link ${activeLink === "Project" ? "active" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveLink("Project");
-                  document
-                    .querySelector("#project")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Project
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                href="#contact"
-                className={`nav-link ${activeLink === "Contact" ? "active" : ""}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveLink("Contact");
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+        {/* LOGO */}
+        <div className="navbar-logo-wrapper">
+          <Logo />
         </div>
-        </nav>
-      
-    </>
+
+        {/* RIGHT */}
+        <ul className={`nav-right ${menuOpen ? "open" : ""}`}>
+          <li><a onClick={() => handleClick("Resume", "#resume")} className={`nav-link ${activeLink==="Resume"?"active":""}`}>Resume</a></li>
+          <li><a onClick={() => handleClick("Project", "#project")} className={`nav-link ${activeLink==="Project"?"active":""}`}>Project</a></li>
+          <li><a onClick={() => handleClick("Contact", "#contact")} className={`nav-link ${activeLink==="Contact"?"active":""}`}>Contact</a></li>
+        </ul>
+
+        {/* HAMBURGER */}
+        <div className={`menu-toggle ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </div>
+    </nav>
   );
 };
 
