@@ -1,0 +1,75 @@
+.banner {
+  width: 100%;
+  background: #ff6a00;
+  padding: clamp(35px, 6vw, 60px) 0;
+  border-radius: clamp(15px, 3vw, 25px);
+  position: relative;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+/* STRIP */
+.whiteStrip {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: clamp(45px, 5vw, 60px);
+  background: #fff;
+  transform: rotate(-2.5deg) translateY(-50%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* TRACK */
+.slideTrack {
+  display: flex;
+  width: max-content;
+  gap: 60px; /* ✅ better spacing */
+  animation: scroll 18s linear infinite;
+  will-change: transform;
+}
+
+/* TEXT */
+.slideText {
+  font-size: clamp(18px, 3vw, 48px);
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ✅ replaces margin hacks */
+}
+
+/* STAR */
+.star {
+  width: clamp(14px, 2vw, 28px);
+  height: auto;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* HOVER PAUSE */
+.banner:hover .slideTrack {
+  animation-play-state: paused;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 576px) {
+  .whiteStrip {
+    transform: rotate(-2deg) translateY(-50%);
+  }
+
+  .slideTrack {
+    gap: 30px;
+  }
+}

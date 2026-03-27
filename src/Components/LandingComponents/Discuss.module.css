@@ -1,4 +1,4 @@
-.discuss-root {
+.discussRoot {
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
@@ -7,34 +7,34 @@
 }
 
 /* CARD */
-.discuss-card {
+.discussCard {
   text-align: center;
   max-width: 900px;
   width: 100%;
 }
 
 /* HEADING */
-.discuss-heading {
+.discussHeading {
   font-size: clamp(1.8rem, 4vw, 3.2rem);
   font-weight: 600;
   color: #2d3748;
   line-height: 1.3;
 }
 
-.discuss-heading span {
+.discussHeading span {
   color: #ff7a2f;
   font-weight: 700;
 }
 
 /* INPUT WRAPPER */
-.input-wrapper {
+.inputWrapper {
   margin-top: 25px;
   display: flex;
   justify-content: center;
 }
 
 /* INPUT BOX */
-.input-box {
+.inputBox {
   display: flex;
   align-items: center;
   background: #fff;
@@ -60,12 +60,12 @@
   flex-shrink: 0;
 }
 
-.input-box img {
+.inputBox img {
   width: clamp(18px, 2vw, 28px);
 }
 
 /* INPUT */
-.input-box input {
+.inputBox input {
   border: none;
   outline: none;
   flex: 1;
@@ -73,12 +73,12 @@
   min-width: 0;
 }
 
-.input-box input::placeholder {
+.inputBox input::placeholder {
   color: #777;
 }
 
 /* BUTTON */
-.input-box button {
+.inputBox button {
   background: #ff7a2f;
   border: none;
   color: #fff;
@@ -115,20 +115,20 @@
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+/* ================= RESPONSIVE ================= */
 
-  .input-box {
+@media (max-width: 768px) {
+  .inputBox {
     padding: 10px 12px;
   }
 
-  .input-box button {
+  .inputBox button {
     padding: 12px 20px;
   }
 }
 
 @media (max-width: 600px) {
-
-  .input-box {
+  .inputBox {
     flex-direction: column;
     align-items: stretch;
     border-radius: 20px;
@@ -139,11 +139,11 @@
     margin: 0 auto;
   }
 
-  .input-box input {
+  .inputBox input {
     text-align: center;
   }
 
-  .input-box button {
+  .inputBox button {
     width: 100%;
   }
 
@@ -153,8 +153,7 @@
 }
 
 @media (max-width: 400px) {
-
-  .discuss-heading {
+  .discussHeading {
     font-size: 1.6rem;
   }
 

@@ -1,5 +1,6 @@
 import React from 'react'
-import './Footer.css'
+import styles from './Footer.module.css'
+
 import Logo from "../GlobalComponents/Logo"
 import Hire from "/src/assets/up right.svg"
 import Mail0 from "/src/assets/send.svg"
@@ -8,40 +9,35 @@ import Youtube from "/src/assets/youtube.svg"
 import Whatsapp from "/src/assets/whatsapp.svg" 
 import Instagram from "/src/assets/instagram.svg" 
 import Twitter from "/src/assets/Union.svg"
+
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
+    <footer className={styles.footer}>
+      <div className={styles.footerContainer}>
 
-        {/* top heading */}
-        <div className="footer-top">
+        <div className={styles.footerTop}>
           <h1>Lets Connect there</h1>
-          <button className="hire-btn">
+
+          <button className={styles.hireBtn}>
             Hire me <span><img src={Hire} alt="" /></span>
           </button>
         </div>
 
-        <div className="divider"></div>
+        <div className={styles.divider}></div>
 
-        {/* middle section */}
-        <div className="footer-middle">
+        <div className={styles.footerMiddle}>
 
-          {/* column 1 */}
-          <div className="footer-col about">
-            <div className="logo">
-             
-              <Logo/>
-             
-              
+          <div className={`${styles.footerCol} ${styles.about}`}>
+            <div className={styles.logo}>
+              <Logo />
             </div>
 
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+              Sed congue interdum ligula a dignissim.
             </p>
 
-            <div className="social-icons">
+            <div className={styles.socialIcons}>
               <img src={Facebook} alt="" />
               <img src={Youtube} alt="" />
               <img src={Whatsapp} alt="" />
@@ -50,8 +46,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* column 2 */}
-          <div className="footer-col">
+          <div className={styles.footerCol}>
             <h3>Navigation</h3>
             <ul>
               <li>Home</li>
@@ -62,8 +57,7 @@ function Footer() {
             </ul>
           </div>
 
-          {/* column 3 */}
-          <div className="footer-col">
+          <div className={styles.footerCol}>
             <h3>Contact</h3>
             <ul>
               <li>+20 11 43 63 73 41</li>
@@ -72,10 +66,10 @@ function Footer() {
             </ul>
           </div>
 
-          {/* column 4 */}
-          <div className="footer-col newsletter">
+          <div className={`${styles.footerCol} ${styles.newsletter}`}>
             <h3>Get the latest information</h3>
-            <div className="email-box">
+
+            <div className={styles.emailBox}>
               <input type="email" placeholder="Email Address" />
               <button><img src={Mail0} alt="" /></button>
             </div>
@@ -83,13 +77,13 @@ function Footer() {
 
         </div>
 
-        <div className="divider"></div>
+        <div className={styles.divider}></div>
 
-        {/* bottom section */}
-        <div className="footer-bottom">
-          <p>Copyright© 2023 Fawziuiux. All Rights Reserved.</p>
+        <div className={styles.footerBottom}>
+          <p>Copyright© 2023 Fawziuiux.</p>
           <p>User Terms & Conditions | Privacy Policy</p>
         </div>
+
       </div>
     </footer>
   )

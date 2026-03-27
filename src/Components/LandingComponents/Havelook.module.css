@@ -1,0 +1,338 @@
+.portfolioSec {
+  width: 100%;
+  padding: clamp(40px, 7vw, 100px) 6%;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #fdf7f3, #ffffff);
+}
+
+.portfolioContainer {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* TOP */
+.portfolioTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.portfolioTitle {
+  font-size: clamp(30px, 5vw, 70px);
+  font-weight: 600;
+  color: #1f2a37;
+  line-height: 1.2;
+  font-family: 'Lufga', sans-serif;
+}
+
+.portfolioTitle span {
+  color: #f47c33;
+  position: relative;
+}
+
+.portfolioTitle span::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(244, 124, 51, 0.2);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.portfolioSeeall {
+  background: linear-gradient(135deg, #f47c33, #ff9a5a);
+  color: white;
+  border: none;
+  padding: clamp(12px, 2vw, 18px) clamp(24px, 3vw, 42px);
+  border-radius: 50px;
+  font-size: clamp(14px, 1.5vw, 18px);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(244, 124, 51, 0.3);
+  transition: all 0.3s ease;
+}
+
+.portfolioSeeall:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(244, 124, 51, 0.5);
+}
+
+/* SLIDER */
+.portfolioSlider {
+  display: flex;
+  gap: clamp(20px, 4vw, 40px);
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.portfolioCard {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.portfolioCard:hover {
+  transform: translateY(-10px) rotateX(4deg) rotateY(-4deg);
+}
+
+/* IMAGE */
+.portfolioCard img {
+  width: 100%;
+  height: clamp(240px, 30vw, 360px);
+  object-fit: cover;
+  border-radius: 30px;
+  transition: transform 0.7s ease;
+}
+
+.portfolioCard:hover img {
+  transform: scale(1.08);
+}
+
+/* GRADIENT OVERLAY */
+.portfolioCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.2),
+    transparent
+  );
+  z-index: 1;
+}
+
+/* ARROW */
+.portfolioCardArrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #f47c33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.portfolioCardArrow img {
+  width: 40%;
+  transition: 0.3s;
+}
+
+.portfolioCard:hover .portfolioCardArrow {
+  background: #f47c33;
+  transform: rotate(45deg) scale(1.1);
+}
+
+.portfolioCard:hover .portfolioCardArrow img {
+  filter: brightness(0) invert(1);
+}
+
+/* TITLE */
+.cardTitle {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: clamp(28px, 5vw, 70px);
+  color: white;
+  z-index: 2;
+  font-family: 'Lufga', sans-serif;
+  letter-spacing: -1px;
+}
+
+/* 1. The Overlay stays constant but fades in the BLUR */
+.portfolioCardOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  z-index: 4;
+  opacity: 0;
+  
+  /* Move blur here so it's ready as soon as the card is hovered */
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  
+  transition: opacity 0.4s ease;
+  border-radius: 30px;
+  pointer-events: none;
+}
+
+/* 2. The Glass Box now only handles the SLIDE, not the blur */
+.portfolioGlassFull {
+  width: 100%;
+  padding: 25px;
+  border-radius: 20px;
+  
+  /* Solid-ish background to prevent "ghosting" during movement */
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* Animation */
+  transform: translateY(40px); 
+  transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* 3. The Hover Triggers */
+.portfolioCard:hover .portfolioCardOverlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.portfolioCard:hover .portfolioGlassFull {
+  transform: translateY(0);
+}
+
+/* 4. Hide the main title so it doesn't look messy underneath */
+.cardTitle {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.portfolioCard:hover .cardTitle {
+  opacity: 0;
+}
+
+.portfolioGlassFull h2 {
+  font-size: clamp(24px, 3vw, 50px);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.portfolioGlassFull p {
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: rgba(255,255,255,0.85);
+}
+
+/* DOTS */
+.portfolioDots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 50px 0;
+}
+
+.portfolioDots span {
+  width: 10px;
+  height: 10px;
+  background: #d3d3d3;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.active {
+  width: 40px;
+  border-radius: 20px;
+  background: #f47c33;
+}
+
+/* TAGS */
+.portfolioTags {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2vw, 20px);
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.portfolioTags span {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #f3f3f3, #ffffff);
+  border-radius: 40px;
+  font-size: clamp(13px, 1.5vw, 16px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.portfolioTags span:hover {
+  background: #f47c33;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* BOTTOM */
+.portfolioBottom {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.portfolioBottom h2 {
+  font-size: clamp(24px, 3vw, 42px);
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.portfolioBottomArrow {
+  background: linear-gradient(135deg, #f47c33, #ff9a5a);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.portfolioBottomArrow:hover {
+  transform: rotate(45deg) scale(1.1);
+}
+
+.portfolioBottomArrow img {
+  width: 18px;
+}
+
+.portfolioBottom p {
+  margin-top: 15px;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .portfolioTop {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolioSlider {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolioSec {
+    padding: 30px 5%;
+  }
+
+  .portfolioSeeall {
+    width: 100%;
+  }
+}

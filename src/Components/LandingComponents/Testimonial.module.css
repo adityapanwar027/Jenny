@@ -1,0 +1,167 @@
+/* ================= TESTIMONIAL SECTION ================= */
+
+.testimonials-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vw, 120px) 0;
+  background: 
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("/src/assets/testimonial.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: clamp(20px, 4vw, 40px);
+}
+
+/* glow */
+.testimonials-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,132,0,0.15), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,132,0,0.1), transparent 40%);
+  z-index: 0;
+}
+
+.ts-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 clamp(12px, 4vw, 24px);
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= HEADER ================= */
+
+.ts-header {
+  text-align: center;
+  margin-bottom: clamp(40px, 6vw, 70px);
+}
+
+.ts-header h2 {
+  font-size: clamp(22px, 4vw, 48px);
+  line-height: 1.3;
+  color: #fff;
+}
+
+.ts-header span {
+  color: #ff7a00;
+}
+
+.ts-header p {
+  max-width: 700px;
+  margin: clamp(12px, 2vw, 20px) auto 0;
+  font-size: clamp(13px, 1.5vw, 16px);
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* ================= SLIDER ================= */
+
+.ts-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ts-cards {
+  display: flex;
+  gap: clamp(16px, 3vw, 30px);
+  animation: slide 40s linear infinite;
+}
+
+/* ================= CARD ================= */
+
+.ts-card {
+  flex: 0 0 auto;
+  width: clamp(260px, 30vw, 420px);
+  padding: clamp(18px, 3vw, 30px);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* user */
+.ts-user {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 15px);
+  margin-bottom: clamp(12px, 2vw, 20px);
+}
+
+.ts-user img {
+  width: clamp(40px, 5vw, 55px);
+  height: clamp(40px, 5vw, 55px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ts-user h4 {
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+
+.ts-user span {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #aaa;
+}
+
+/* rating */
+.ts-rating {
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 10px;
+}
+
+/* text */
+.ts-text {
+  font-size: clamp(13px, 1.5vw, 15px);
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.ts-cards:hover {
+  animation-play-state: paused;
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+  .ts-cards {
+    animation-duration: 50s;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .ts-card {
+    width: 280px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .ts-card {
+    width: 240px;
+  }
+
+  .ts-header h2 {
+    font-size: 20px;
+  }
+}

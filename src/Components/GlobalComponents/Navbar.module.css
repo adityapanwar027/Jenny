@@ -9,7 +9,7 @@
 }
 
 /* CONTAINER */
-.navbar-container {
+.navbarContainer {
   background: #000;
   border-radius: 60px;
   padding: 8px 18px;
@@ -23,8 +23,8 @@
 }
 
 /* NAV LIST */
-.nav-left,
-.nav-right {
+.navLeft,
+.navRight {
   display: flex;
   align-items: center;
   gap: clamp(8px, 1.5vw, 20px);
@@ -32,11 +32,11 @@
   flex: 1;
 }
 
-.nav-left { justify-content: flex-start; }
-.nav-right { justify-content: flex-end; }
+.navLeft { justify-content: flex-start; }
+.navRight { justify-content: flex-end; }
 
 /* LINKS */
-.nav-link {
+.navLink {
   font-family: 'Lufga';
   font-size: clamp(12px, 1vw, 16px);
   color: #fff;
@@ -47,28 +47,30 @@
   white-space: nowrap;
 }
 
-.nav-link:hover {
+.navLink:hover {
   background: #333;
 }
 
-.nav-link.active {
+.active {
   background: #ff8c42;
 }
 
 /* LOGO */
-.navbar-logo-wrapper {
+.navbarLogoWrapper {
   flex-shrink: 0;
   padding: 6px 12px;
 }
 
-.menu-toggle {
+/* MENU TOGGLE */
+.menuToggle {
   display: none;
   flex-direction: column;
+  margin-left: auto;
   gap: 5px;
   cursor: pointer;
 }
 
-.menu-toggle span {
+.menuToggle span {
   width: 24px;
   height: 3px;
   background: white;
@@ -76,30 +78,32 @@
 }
 
 /* animation */
-.menu-toggle.active span:nth-child(1) {
+.menuToggleActive span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-.menu-toggle.active span:nth-child(2) {
+.menuToggleActive span:nth-child(2) {
   opacity: 0;
 }
-.menu-toggle.active span:nth-child(3) {
+.menuToggleActive span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 992px) {
-  .nav-link {
+  .navLink {
     padding: 6px 12px;
   }
 }
 
 @media (max-width: 768px) {
 
-  .menu-toggle {
+  .menuToggle {
     display: flex;
   }
 
-  .nav-left,
-  .nav-right {
+  .navLeft,
+  .navRight {
     position: absolute;
     top: 70px;
     left: 0;
@@ -111,18 +115,18 @@
     gap: 15px;
     border-radius: 20px;
     display: none;
+    z-index: 1000; /* ✅ fix overlap issues */
   }
 
-  .nav-left.open,
-  .nav-right.open {
+  .open {
     display: flex;
   }
 
-  .navbar-container {
+  .navbarContainer {
     flex-wrap: wrap;
   }
 
-  .navbar-logo-wrapper {
+  .navbarLogoWrapper {
     order: -1;
     width: 100%;
     display: flex;
@@ -131,7 +135,7 @@
 }
 
 @media (max-width: 480px) {
-  .nav-link {
+  .navLink {
     font-size: 13px;
   }
 }

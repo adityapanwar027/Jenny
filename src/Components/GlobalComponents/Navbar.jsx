@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
 import { useState } from "react";
 import Logo from "../GlobalComponents/Logo";
 
@@ -13,35 +13,81 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-
+    <nav className={styles.navbar}>
+      <div className={styles.navbarContainer}>
         {/* LEFT */}
-        <ul className={`nav-left ${menuOpen ? "open" : ""}`}>
-          <li><a onClick={() => handleClick("Home", "#home")} className={`nav-link ${activeLink==="Home"?"active":""}`}>Home</a></li>
-          <li><a onClick={() => handleClick("About", "#about")} className={`nav-link ${activeLink==="About"?"active":""}`}>About</a></li>
-          <li><a onClick={() => handleClick("Service", "#service")} className={`nav-link ${activeLink==="Service"?"active":""}`}>Service</a></li>
-        </ul>
+          <ul className={`${styles.navLeft} ${menuOpen ? styles.open : ""}`}>
+            <li>
+              <a
+                onClick={() => handleClick("Home", "#home")}
+                className={`${styles.navLink} ${activeLink === "Home" ? styles.active : ""}`}
+              >
+                Home
+              </a>
+            </li>
 
-        {/* LOGO */}
-        <div className="navbar-logo-wrapper">
-          <Logo />
-        </div>
+            <li>
+              <a
+                onClick={() => handleClick("About", "#about")}
+                className={`${styles.navLink} ${activeLink === "About" ? styles.active : ""}`}
+              >
+                About
+              </a>
+            </li>
 
-        {/* RIGHT */}
-        <ul className={`nav-right ${menuOpen ? "open" : ""}`}>
-          <li><a onClick={() => handleClick("Resume", "#resume")} className={`nav-link ${activeLink==="Resume"?"active":""}`}>Resume</a></li>
-          <li><a onClick={() => handleClick("Project", "#project")} className={`nav-link ${activeLink==="Project"?"active":""}`}>Project</a></li>
-          <li><a onClick={() => handleClick("Contact", "#contact")} className={`nav-link ${activeLink==="Contact"?"active":""}`}>Contact</a></li>
-        </ul>
+            <li>
+              <a
+                onClick={() => handleClick("Service", "#service")}
+                className={`${styles.navLink} ${activeLink === "Service" ? styles.active : ""}`}
+              >
+                Service
+              </a>
+            </li>
+          </ul>
 
+          {/* LOGO */}
+          <div className={styles.navbarLogoWrapper}>
+            <Logo />
+          </div>
+
+          {/* RIGHT */}
+          <ul className={`${styles.navRight} ${menuOpen ? styles.open : ""}`}>
+            <li>
+              <a
+                onClick={() => handleClick("Resume", "#resume")}
+                className={`${styles.navLink} ${activeLink === "Resume" ? styles.active : ""}`}
+              >
+                Resume
+              </a>
+            </li>
+
+            <li>
+              <a
+                onClick={() => handleClick("Project", "#project")}
+                className={`${styles.navLink} ${activeLink === "Project" ? styles.active : ""}`}
+              >
+                Project
+              </a>
+            </li>
+
+            <li>
+              <a
+                onClick={() => handleClick("Contact", "#contact")}
+                className={`${styles.navLink} ${activeLink === "Contact" ? styles.active : ""}`}
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
         {/* HAMBURGER */}
-        <div className={`menu-toggle ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className={`${styles.menuToggle} ${menuOpen ? styles.menuToggleActive : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          >
           <span></span>
           <span></span>
           <span></span>
         </div>
-
       </div>
     </nav>
   );

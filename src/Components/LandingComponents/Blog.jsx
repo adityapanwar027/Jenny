@@ -1,5 +1,5 @@
 import React from "react";
-import "./Blog.css";
+import styles from "./Blog.module.css";
 
 import Blog1 from "/src/assets/blog.jpg";
 import Blog2 from "/src/assets/up right copy.svg";
@@ -12,35 +12,35 @@ function Blog() {
   return (
     <>
       {/* HEADER */}
-      <section className="blogHeaderSection">
-        <div className="blogHeaderContainer">
-          <div className="blogHeaderLeft">
+      <section className={styles.blogHeaderSection}>
+        <div className={styles.blogHeaderContainer}>
+          <div className={styles.blogHeaderLeft}>
             <h1>
               From my <br />
               blog post
             </h1>
           </div>
 
-          <div className="blogHeaderRight">
-            <button className="blogSeeBtn">See All</button>
+          <div>
+            <button className={styles.blogSeeBtn}>See All</button>
           </div>
         </div>
       </section>
 
       {/* CARDS */}
-      <section className="blogCardsSection">
-        <div className="portfolioCardsWrapper">
+      <section className={styles.blogCardsSection}>
+        <div className={styles.portfolioCardsWrapper}>
           {cards.map((img, i) => (
-            <div className="portfolioCardContainer" key={i}>
-              <div className="portfolioCardShape">
+            <div className={styles.portfolioCardContainer} key={i}>
+              <div className={styles.portfolioCardShape}>
                 <img
                   src={img}
                   alt="Blog preview"
-                  className="portfolioCardImage"
+                  className={styles.portfolioCardImage}
                 />
               </div>
 
-              <div className="portfolioCardArrow">
+              <div className={styles.portfolioCardArrow}>
                 <img src={Blog2} alt="arrow" />
               </div>
             </div>
@@ -49,58 +49,57 @@ function Blog() {
       </section>
 
       {/* BLOG LIST */}
-      <section className="blogSec">
-        <div className="blogWrapper">
-          {/* ITEM 1 */}
-          <div className="blogItem">
-            <div className="blogTag">UI/ UX Design</div>
+      <section className={styles.blogSec}>
+        <div className={styles.blogWrapper}>
 
-            <div className="blogInfo">
-              <span className="blogDot"></span>
+          <div className={styles.blogItem}>
+            <div className={styles.blogTag}>UI/ UX Design</div>
+
+            <div className={styles.blogInfo}>
+              <span className={styles.blogDot}></span>
               <span>Jayesh Patil</span>
 
-              <span className="blogDot"></span>
+              <span className={styles.blogDot}></span>
               <span>10 Nov, 2023</span>
             </div>
 
-            <h2 className="blogHeading">
+            <h2 className={styles.blogHeading}>
               Design Unraveled: Behind the Scenes of UI/UX Magic
             </h2>
           </div>
 
-          {/* ITEM 2 */}
-          <div className="blogItem">
-            <div className="blogTag">App Design</div>
+          <div className={styles.blogItem}>
+            <div className={styles.blogTag}>App Design</div>
 
-            <div className="blogInfo">
-              <span className="blogDot"></span>
+            <div className={styles.blogInfo}>
+              <span className={styles.blogDot}></span>
               <span>Jayesh Patil</span>
 
-              <span className="blogDot"></span>
+              <span className={styles.blogDot}></span>
               <span>09 Oct, 2023</span>
             </div>
 
-            <h2 className="blogHeading">
+            <h2 className={styles.blogHeading}>
               Sugee: Loan Management System for Rural Sector.
             </h2>
           </div>
 
-          {/* ITEM 3 */}
-          <div className="blogItem">
-            <div className="blogTag">App Design</div>
+          <div className={styles.blogItem}>
+            <div className={styles.blogTag}>App Design</div>
 
-            <div className="blogInfo">
-              <span className="blogDot"></span>
+            <div className={styles.blogInfo}>
+              <span className={styles.blogDot}></span>
               <span>Jayesh Patil</span>
 
-              <span className="blogDot"></span>
+              <span className={styles.blogDot}></span>
               <span>13 Aug, 2023</span>
             </div>
 
-            <h2 className="blogHeading">
+            <h2 className={styles.blogHeading}>
               Cinetrade: Innovative way to invest in Digital Media
             </h2>
           </div>
+
         </div>
       </section>
     </>

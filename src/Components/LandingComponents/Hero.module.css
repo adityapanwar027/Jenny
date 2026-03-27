@@ -1,12 +1,11 @@
-.hero-section {
+.heroSection {
   width: 100%;
-  height: 90vh;
-  min-height: 600px;
+  height: auto;
+  min-height: 90vh;
   background: #ffffff;
   position: relative;
   overflow: hidden;
 }
-
 
 .eclipse {
   position: absolute;
@@ -32,8 +31,8 @@
   transform: translateX(-50%) scale(1.02);
 }
 
-/* LEFT TEXT */
-.frame4-left {
+/* LEFT */
+.frame4Left {
   position: absolute;
   left: 5%;
   top: 50%;
@@ -44,11 +43,11 @@
   transition: transform 0.6s ease;
 }
 
-.frame4-left.hovered {
+.frame4LeftHovered {
   transform: translateY(-170%);
 }
 
-/* RIGHT TEXT */
+/* RIGHT */
 .frame3 {
   position: absolute;
   right: 5%;
@@ -60,11 +59,11 @@
   transition: transform 0.6s ease;
 }
 
-.frame3.hovered {
+.frame3Hovered {
   transform: translateY(-160%);
 }
 
-/* CENTER TEXT */
+/* CENTER */
 .frame4 {
   position: absolute;
   top: 80px;
@@ -76,7 +75,7 @@
   transition: transform 0.6s ease, opacity 0.5s ease;
 }
 
-.frame4.hovered {
+.frame4Hovered {
   transform: translateX(-50%) translateY(100px);
   opacity: 0;
 }
@@ -92,7 +91,7 @@
   transition: transform 0.6s ease, opacity 0.5s ease;
 }
 
-.vector2.hovered {
+.vector2Hovered {
   transform: translateY(100px);
   opacity: 0;
 }
@@ -109,153 +108,203 @@
   transition: all 0.5s;
 }
 
-.doodle.visible {
+.doodleVisible {
   opacity: 1;
   transform: translateX(-50%) scale(0.95);
 }
 
-
-.frame56-button {
+/* CTA CONTAINER */
+.frame56Button {
   position: absolute;
   bottom: 4%;
   left: 50%;
   transform: translateX(-50%);
   width: min(367px, 95%);
   height: 82px;
+
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 10px;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(7.5px);
-  border: 2px solid rgba(255, 255, 255, 0.38);
+  padding: 6px;
+  gap: 6px;
+
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
   border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   z-index: 9;
 }
 
-.hero-cta-button {
+/* BUTTON */
+.heroCtaButton {
   flex: 1;
   height: 54px;
   border-radius: 60px;
+  border: none;
   background: transparent;
-  color: #ffffff;
+  color: #1f2937;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 16px;
+  gap: 8px;
+
   cursor: pointer;
   transition: 0.25s ease;
 }
 
-.hero-cta-button--active {
-  flex: 1.2;
-  height: 60px;
+.heroCtaButton:hover {
   background: #fd853a;
 }
 
-.hero-cta-button__label {
-  font-family: "Lufga", sans-serif;
-  font-size: clamp(14px, 2vw, 22px);
+/* ACTIVE */
+.heroCtaButtonActive {
+  flex: 1.2;
+  height: 60px;
+  background: #fd853a;
   color: #fff;
+  box-shadow: 0 8px 20px rgba(253,133,58,0.35);
 }
 
-.hero-cta-button__arrow {
+/* TEXT */
+.heroCtaButtonLabel {
+  font-family: "Lufga", sans-serif;
+  font-size: clamp(14px, 2vw, 22px);
+  color: inherit;
+}
+
+/* ARROW */
+.heroCtaArrow {
   opacity: 0;
   width: 0;
   transition: 0.25s;
 }
 
-.hero-cta-button__arrow--visible {
+.heroCtaArrowVisible {
   opacity: 1;
-  width: 24px;
+  width: 20px;
 }
 
-.hero-cta-button__arrow-icon {
-  width: 24px;
-  height: 24px;
+.heroCtaArrowIcon {
+  width: 20px;
+  height: 20px;
 }
 
+.heroCtaButtonActive .heroCtaArrowIcon {
+  transform: translateX(3px);
+}
 
-@media (max-width: 992px) {
-  .hero-section {
-    height: 80vh;
+/* ================== LARGE SCREENS (1200px) ================== */
+@media (max-width: 1200px) {
+  .frame4Left {
+    transform: translateY(-120%);
   }
 
-  .frame4-left,
   .frame3 {
-    display: none; /* clean UI on tablet */
+    transform: translateY(-110%);
+  }
+
+  .frame4 {
+    width: clamp(240px, 55vw, 500px);
+  }
+}
+
+
+/* ================== TABLETS (992px) ================== */
+@media (max-width: 992px) {
+  .heroSection {
+    height: auto;
+    min-height: 80vh;
+    padding-top: 40px;
+  }
+
+  /* Hide side floating text */
+  .frame4Left,
+  .frame3 {
+    display: none;
   }
 
   .girl {
-    width: 450px;
+    width: clamp(300px, 50vw, 450px);
   }
 
   .frame4 {
     top: 60px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .hero-section {
-    height: auto;
-    min-height: 550px;
-    padding-top: 40px;
-  }
-
-  .girl {
-    width: 320px;
-  }
-
-  .frame4 {
-    width: 260px;
-    top: 40px;
+    width: clamp(220px, 50vw, 420px);
   }
 
   .vector2 {
     display: none;
   }
 
-  .doodle {
-    width: 350px;
+  .frame56Button {
+    bottom: 3%;
+    width: min(420px, 95%);
+  }
+}
+
+
+/* ================== MOBILE (768px) ================== */
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 550px;
+    padding-top: 40px;
   }
 
-  .frame56-button {
+  .girl {
+    width: clamp(260px, 70vw, 320px);
+  }
+
+  .frame4 {
+    width: 240px;
+    top: 40px;
+  }
+
+  .doodle {
+    width: clamp(250px, 80vw, 350px);
+  }
+
+  .frame56Button {
     height: 70px;
     padding: 6px;
     gap: 6px;
   }
 
-  .hero-cta-button {
+  .heroCtaButton {
     height: 48px;
+    font-size: 14px;
   }
 
-  .hero-cta-button--active {
+  .heroCtaButtonActive {
     height: 52px;
+    flex: 1.1;
   }
 }
 
 
+/* ================== SMALL MOBILE (480px) ================== */
 @media (max-width: 480px) {
-  .hero-section {
+  .heroSection {
     min-height: 500px;
   }
 
   .girl {
-    width: 260px;
+    width: clamp(220px, 75vw, 260px);
   }
 
   .frame4 {
-    width: 220px;
+    width: 200px;
   }
 
-  .hero-cta-button__label {
+  .doodleVisible {
+    transform: translateX(-50%) scale(0.75);
+  }
+
+  .heroCtaButtonLabel {
     font-size: 13px;
   }
 
-  .frame56-button {
+  .frame56Button {
     height: 60px;
+    width: 95%;
   }
 }

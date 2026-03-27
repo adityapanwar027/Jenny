@@ -1,30 +1,45 @@
-import React from 'react'
-import './Slider.css'
+import React from "react";
+import styles from "./Slider.module.css";
+import star from "../../assets/Star 7 (1).svg";
 
 function Slider() {
   return (
-    <section className="banner">
-      <div className="white-strip">
-        <div className="slide-track">
-          <div className="slide-text">
-            <img src="/src/assets/Star 7 (1).svg" alt="" /> Wireframe 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> User Research 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> UX Design 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> App Design 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> Dashboard
+    <section className={styles.banner}>
+      <div className={styles.whiteStrip}>
+        <div className={styles.slideTrack}>
+
+          {/* FIRST LOOP */}
+          <div className={styles.slideText}>
+            <img src={star} className={styles.star} alt="" />
+            Wireframe
+            <img src={star} className={styles.star} alt="" />
+            User Research
+            <img src={star} className={styles.star} alt="" />
+            UX Design
+            <img src={star} className={styles.star} alt="" />
+            App Design
+            <img src={star} className={styles.star} alt="" />
+            Dashboard
           </div>
-                  {/* copy the cards for animation */}
-          <div className="slide-text">
-            <img src="/src/assets/Star 7 (1).svg" alt="" /> Wireframe 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> User Research 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> UX Design 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> App Design 
-            <span><img src="/src/assets/Star 7 (1).svg" alt="" /></span> Dashboard
+
+          {/* DUPLICATE FOR SMOOTH LOOP */}
+          <div className={styles.slideText}>
+            <img src={star} className={styles.star} alt="" />
+            Wireframe
+            <img src={star} className={styles.star} alt="" />
+            User Research
+            <img src={star} className={styles.star} alt="" />
+            UX Design
+            <img src={star} className={styles.star} alt="" />
+            App Design
+            <img src={star} className={styles.star} alt="" />
+            Dashboard
           </div>
+
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Slider
+export default Slider;
