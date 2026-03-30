@@ -291,14 +291,15 @@
 }
 
 .portfolioBottomArrow {
-  background: linear-gradient(135deg, #f47c33, #ff9a5a);
-  height: clamp(35px, 6vw, 50px);
-  width: clamp(35px, 6vw, 50px);
+  --arrow-size: clamp(40px, 5vw, 50px);
+  width: var(--arrow-size);
+  height: var(--arrow-size);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.3s;
+  background: linear-gradient(135deg, #f47c33, #ff9a5a);
+  transition: transform 0.3s ease;
 }
 
 .portfolioBottomArrow:hover {

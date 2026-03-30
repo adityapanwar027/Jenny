@@ -1,48 +1,49 @@
-import React from 'react'
-import styles from './Footer.module.css'
+import React from "react";
+import styles from "./Footer.module.css";
 
-import Logo from "../GlobalComponents/Logo"
-import Hire from "/src/assets/up right.svg"
-import Mail0 from "/src/assets/send.svg"
-import Facebook from "/src/assets/facebook.svg" 
-import Youtube from "/src/assets/youtube.svg"
-import Whatsapp from "/src/assets/whatsapp.svg" 
-import Instagram from "/src/assets/instagram.svg" 
-import Twitter from "/src/assets/Union.svg"
+import Logo from "../GlobalComponents/Logo";
+import Hire from "/src/assets/up right.svg";
+import Mail0 from "/src/assets/send.svg";
+import Facebook from "/src/assets/facebook.svg";
+import Youtube from "/src/assets/youtube.svg";
+import Whatsapp from "/src/assets/whatsapp.svg";
+import Instagram from "/src/assets/instagram.svg";
+import Twitter from "/src/assets/Union.svg";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
-
         <div className={styles.footerTop}>
           <h1>Lets Connect there</h1>
 
           <button className={styles.hireBtn}>
-            Hire me <span><img src={Hire} alt="" /></span>
+            Hire me{" "}
+            <span>
+              <img src={Hire} alt="" />
+            </span>
           </button>
         </div>
 
         <div className={styles.divider}></div>
 
         <div className={styles.footerMiddle}>
-
           <div className={`${styles.footerCol} ${styles.about}`}>
             <div className={styles.logo}>
               <Logo />
             </div>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed congue interdum ligula a dignissim.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              congue interdum ligula a dignissim.
             </p>
 
             <div className={styles.socialIcons}>
-              <img src={Facebook} alt="" />
-              <img src={Youtube} alt="" />
-              <img src={Whatsapp} alt="" />
-              <img src={Instagram} alt="" />
-              <img src={Twitter} alt="" />
+              <FaFacebook className={styles.icons}/>
+              <FaYoutube className={styles.icons}/>
+              <FaInstagram className={styles.icons}/>
+              <FaTwitter className={styles.icons}/>
             </div>
           </div>
 
@@ -71,10 +72,11 @@ function Footer() {
 
             <div className={styles.emailBox}>
               <input type="email" placeholder="Email Address" />
-              <button><img src={Mail0} alt="" /></button>
+              <button>
+                <img src={Mail0} alt="" />
+              </button>
             </div>
           </div>
-
         </div>
 
         <div className={styles.divider}></div>
@@ -83,10 +85,9 @@ function Footer() {
           <p>Copyright© 2023 Fawziuiux.</p>
           <p>User Terms & Conditions | Privacy Policy</p>
         </div>
-
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

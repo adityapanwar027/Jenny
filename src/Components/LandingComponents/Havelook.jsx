@@ -1,9 +1,8 @@
 import React from "react";
+import { FiArrowUpRight } from "react-icons/fi"; // react-icons arrow
 import styles from "./Havelook.module.css";
 
-import Project1 from "/src/assets/arrow.svg";
 import Project0 from "/src/assets/look.png";
-import Project3 from "/src/assets/up right.svg";
 
 function Havelook() {
   return (
@@ -16,19 +15,16 @@ function Havelook() {
             Lets have a look at <br />
             my <span>Portfolio</span>
           </h1>
-
           <button className={styles.portfolioSeeall}>See All</button>
         </div>
 
         {/* Cards */}
         <div className={styles.portfolioSlider}>
-
           {[1, 2].map((_, i) => (
             <div className={styles.portfolioCard} key={i}>
               <img src={Project0} alt="project" />
-
               <button className={styles.portfolioCardArrow}>
-                <img src={Project3} alt="" />
+                <FiArrowUpRight size="1.2em" color="white" />
               </button>
 
               <h2 className={styles.cardTitle}>Lirante</h2>
@@ -44,7 +40,6 @@ function Havelook() {
               </div>
             </div>
           ))}
-
         </div>
 
         {/* Dots */}
@@ -69,7 +64,7 @@ function Havelook() {
           <h2>
             Lirante - Food Delivery Solution
             <span className={styles.portfolioBottomArrow}>
-              <img src={Project3} alt="" />
+              <FiArrowUpRight size="1.2em" color="white" />
             </span>
           </h2>
 
