@@ -31,20 +31,16 @@ export default function MyServices() {
           <clipPath id="cardShape" clipPathUnits="userSpaceOnUse">
             <path
               d="
-        M0 40
-        C0 18 18 0 40 0
-        H376
-        C398 0 416 18 416 40
-        V330
-        C416 352 398 370 376 370
-        H330
-        C300 370 270 400 270 440
-        V470
-        C270 490 255 508 235 508
-        H40
-        C18 508 0 490 0 470
-        Z
-      "
+      M 50,0 
+      H 366 
+      A 50,50 0 0 1 416,50 
+      V 458 
+      A 50,50 0 0 1 366,508 
+      H 50 
+      A 50,50 0 0 1 0,458 
+      V 50 
+      A 50,50 0 0 1 50,0 
+      Z"
             />
           </clipPath>
         </defs>
