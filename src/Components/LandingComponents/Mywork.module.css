@@ -31,10 +31,10 @@
   content: '';
   position: absolute;
   left: 50%;
-  top: 0;
+  top: 25px; /* start slightly below first circle */
+  bottom: 25px; /* stop slightly above last circle */
   transform: translateX(-50%);
   width: 2px;
-  height: 100%;
   border-left: 3px dotted #2f3b4c;
 }
 
@@ -45,14 +45,22 @@
   gap: clamp(24px, 3vw, 60px);
   margin-bottom: clamp(30px, 3vw, 60px);
   position: relative;
+
+  /* make both sides equal height */
+  align-items: stretch; /* stretch columns to row height */
 }
 
 /* LEFT RIGHT */
 .mywork-left,
 .mywork-right {
   width: 40%;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
+  /* stretch full row height */
+  height: 100%;
+}
 .mywork-left h2,
 .mywork-right h2 {
   font-size: clamp(28px, 3vw, 40px);
@@ -72,10 +80,9 @@
 .mywork-circle-wrapper {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
-  top: 0;
+  top: 50%; /* vertically center the circle */
+  transform: translate(-50%, -50%); /* center horizontally and vertically */
 }
-
 .mywork-circle-outer {
   width: 50px;
   height: 50px;
