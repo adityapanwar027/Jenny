@@ -16,7 +16,7 @@
   grid-template-columns: minmax(320px, 603px) minmax(0, 1fr);
   gap: clamp(24px, 4vw, 48px);
   align-items: center;
-  width: min(1100px, 100%);
+  width: min(100%);
   margin: 0 auto;
   box-sizing: border-box;
 }
