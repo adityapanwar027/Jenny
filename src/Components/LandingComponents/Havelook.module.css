@@ -127,7 +127,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.1);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
   z-index: 5;
   transition: all 0.3s ease;
@@ -282,16 +282,18 @@
 }
 
 .portfolioBottom h2 {
-  font-size: clamp(24px, 3vw, 42px);
-  display: inline-flex;
+  font-size: clamp(20px, 4vw, 36px);
+  display: flex; /* instead of inline-flex for better wrapping */
   align-items: center;
-  gap: 15px;
+  justify-content: center; /* center on mobile */
+  gap: clamp(10px, 2vw, 15px);
+  flex-wrap: wrap; /* allow arrow to move below text if needed */
 }
 
 .portfolioBottomArrow {
   background: linear-gradient(135deg, #f47c33, #ff9a5a);
-  height: 50px;
-  width: 50px;
+  height: clamp(35px, 6vw, 50px);
+  width: clamp(35px, 6vw, 50px);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -304,7 +306,7 @@
 }
 
 .portfolioBottomArrow img {
-  width: 18px;
+  width: clamp(14px, 3vw, 18px);
 }
 
 .portfolioBottom p {

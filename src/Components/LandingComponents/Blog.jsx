@@ -7,7 +7,7 @@ import Blog3 from "/src/assets/blog2.png";
 import Blog4 from "/src/assets/blog.png";
 
 function Blog() {
-  const cards = [Blog1, Blog3, Blog4];
+  const cards = [Blog4, Blog3, Blog4];
 
   return (
     <>

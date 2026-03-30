@@ -1,5 +1,3 @@
-/* ================= TESTIMONIAL SECTION ================= */
-
 .testimonials-section {
   position: relative;
   width: 100%;
@@ -33,8 +31,6 @@
   z-index: 2;
 }
 
-/* ================= HEADER ================= */
-
 .ts-header {
   text-align: center;
   margin-bottom: clamp(40px, 6vw, 70px);
@@ -58,7 +54,6 @@
   color: #ccc;
 }
 
-/* ================= SLIDER ================= */
 
 .ts-slider {
   width: 100%;
@@ -71,7 +66,6 @@
   animation: slide 40s linear infinite;
 }
 
-/* ================= CARD ================= */
 
 .ts-card {
   flex: 0 0 auto;
@@ -121,7 +115,6 @@
   color: #ddd;
 }
 
-/* ================= ANIMATION ================= */
 
 @keyframes slide {
   0% {
@@ -140,7 +133,7 @@
 /* Tablet */
 @media (max-width: 992px) {
   .ts-cards {
-    animation-duration: 50s;
+    animation-duration: 30s;
   }
 }
 
@@ -153,6 +146,9 @@
   .ts-card {
     width: 280px;
   }
+  .ts-cards{
+    animation-duration: 20s;
+  }
 }
 
 /* Small Mobile */
@@ -163,5 +159,8 @@
 
   .ts-header h2 {
     font-size: 20px;
+  }
+  .ts-cards{
+    animation-duration: 13s;
   }
 }

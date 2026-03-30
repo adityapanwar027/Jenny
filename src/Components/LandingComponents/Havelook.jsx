@@ -28,7 +28,7 @@ function Havelook() {
               <img src={Project0} alt="project" />
 
               <button className={styles.portfolioCardArrow}>
-                <img src={Project1} alt="" />
+                <img src={Project3} alt="" />
               </button>
 
               <h2 className={styles.cardTitle}>Lirante</h2>

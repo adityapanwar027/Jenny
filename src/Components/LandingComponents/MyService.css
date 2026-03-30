@@ -160,11 +160,11 @@
   margin: 96px auto 0;
 
   display: grid; /* ✅ FIX */
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 
   justify-items: center;
 }
-
 
 .single-card-container {
   --service-card-hover-duration: 300ms;
@@ -181,23 +181,36 @@ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  gap: 40px;
   position: absolute;
   inset: 0;
 
-  background: rgba(255, 255, 255, 0.05); /* ✅ transparent */
-  backdrop-filter: blur(5px); /* ✅ glass */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(255, 255, 255, 0.15); /* ✅ premium border */
   border-radius: 35px;
-  isolation: isolate;
   overflow: hidden;
-  clip-path: path(
-    "M0 37C0 16.5655 16.5655 0 37 0H379C399.435 0 416 16.5655 416 37V338.5C416 358.935 399.435 375.5 379 375.5H356.049C317.534 375.5 286.476 407.031 287.057 445.541L287.433 470.442C287.745 491.092 271.09 508 250.437 508H37C16.5655 508 0 491.435 0 471V37Z"
-  );
 }
 
+/* 🔥 CURVE CUT AROUND ARROW */
 .my-services__card-wrap::after {
-  content: none;
-}
+  content: "";
+  position: absolute;
 
+  width: 130px;
+  height: 130px;
+
+  bottom: -45px;
+  right: -45px;
+
+  /* ✅ MATCH SECTION BACKGROUND + OVERLAY */
+  background: 
+    linear-gradient(rgba(0,0,0,0.04), rgba(0,0,0,0.04)),
+    url("../../assets/backgroundimage.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 50%;
+  z-index: 2;
+}
 .my-services__card--zoom {
   position: absolute;
   inset: 0;
@@ -214,7 +227,7 @@ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  gap: 40px;
   backdrop-filter: blur(7.5px);
   -webkit-backdrop-filter: blur(7.5px);
   z-index: 0;
-  border: 2px solid #919191;
+  border-radius: 35px;
   border-radius: 35px;
   box-sizing: border-box;
 }
@@ -319,8 +332,8 @@ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  gap: 40px;
 
 .my-services__card-arrow {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  right: 15px;
+  bottom: 15px;
 
   width: clamp(60px, 8vw, 114px);
   height: clamp(60px, 8vw, 114px);
@@ -331,7 +344,7 @@ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));  gap: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 5;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

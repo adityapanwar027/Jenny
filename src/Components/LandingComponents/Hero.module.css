@@ -193,7 +193,6 @@
   transform: translateX(3px);
 }
 
-/* ================== LARGE SCREENS (1200px) ================== */
 @media (max-width: 1200px) {
   .frame4Left {
     transform: translateY(-120%);
@@ -209,7 +208,6 @@
 }
 
 
-/* ================== TABLETS (992px) ================== */
 @media (max-width: 992px) {
   .heroSection {
     height: auto;
@@ -217,7 +215,6 @@
     padding-top: 40px;
   }
 
-  /* Hide side floating text */
   .frame4Left,
   .frame3 {
     display: none;
@@ -243,7 +240,6 @@
 }
 
 
-/* ================== MOBILE (768px) ================== */
 @media (max-width: 768px) {
   .heroSection {
     min-height: 550px;
@@ -281,7 +277,6 @@
 }
 
 
-/* ================== SMALL MOBILE (480px) ================== */
 @media (max-width: 480px) {
   .heroSection {
     min-height: 500px;

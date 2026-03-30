@@ -8,7 +8,6 @@
   margin-top: 30px;
 }
 
-/* STRIP */
 .whiteStrip {
   position: absolute;
   top: 50%;
@@ -22,11 +21,10 @@
   overflow: hidden;
 }
 
-/* TRACK */
 .slideTrack {
   display: flex;
   width: max-content;
-  gap: 60px; /* ✅ better spacing */
+  gap: 60px; 
   animation: scroll 18s linear infinite;
   will-change: transform;
 }
@@ -38,7 +36,7 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 20px; /* ✅ replaces margin hacks */
+  gap: 20px; 
 }
 
 /* STAR */
@@ -47,7 +45,6 @@
   height: auto;
 }
 
-/* ANIMATION */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -57,12 +54,9 @@
   }
 }
 
-/* HOVER PAUSE */
 .banner:hover .slideTrack {
   animation-play-state: paused;
 }
-
-/* ================= RESPONSIVE ================= */
 
 @media (max-width: 576px) {
   .whiteStrip {

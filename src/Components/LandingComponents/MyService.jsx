@@ -26,6 +26,29 @@ export default function MyServices() {
       onMouseEnter={() => setSectionActive(true)}
       onMouseLeave={() => setSectionActive(false)}
     >
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="cardShape" clipPathUnits="userSpaceOnUse">
+            <path
+              d="
+        M0 40
+        C0 18 18 0 40 0
+        H376
+        C398 0 416 18 416 40
+        V330
+        C416 352 398 370 376 370
+        H330
+        C300 370 270 400 270 440
+        V470
+        C270 490 255 508 235 508
+        H40
+        C18 508 0 490 0 470
+        Z
+      "
+            />
+          </clipPath>
+        </defs>
+      </svg>
       <div className="my-services__shapes-wrapper">
         <img
           src={aboveBg1}
@@ -55,8 +78,8 @@ export default function MyServices() {
         </h2>
 
         <p className="my-services__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
-          posuere in justo vulputate, bibendum sodales.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
+          nunc, posuere in justo vulputate, bibendum sodales.
         </p>
       </div>
 
